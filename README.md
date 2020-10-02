@@ -21,5 +21,5 @@ Note: This script is part of the bigger script arcane.py
 
 
 
-#Reference
+# Reference
 HMMER: Eddy SR. Accelerated Profile HMM Searches. Pearson WR, editor. PLoS Comput Biol. 2011;7: e1002195.
