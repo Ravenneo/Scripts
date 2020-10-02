@@ -12,4 +12,9 @@ Note: This script is part of the bigger script arcane.py
 3) get_fasta.py:  Python based script that uses the Entrez util Efetch to download the protein Fasta sequence for a list of proteins IDs. Run as follows:
 python get_fasta.py <your_email> <file_with_protein_IDs.csv>
 4) get_fasta_DNA.py:  Python based script that uses the Entrez util Efetch to download the DNA Fasta sequence for a list of nuccore IDs. Run as follows:
-python get_fasta_dna.py <your_email> <file_with_protein_IDs.csv>
+** python get_fasta_dna.py <your_email> <file_with_protein_IDs.csv>** 
+
+
+
+
+Dependencies: For Scripts from 2-x, Biopython is needed. Additionally, arcane.py require a local installation of HMMER. 
