@@ -10,11 +10,6 @@ import pandas as pd
 from Bio import Entrez
 Entrez.email = sys.argv[1]
 
-    
-
-# get from WPs accession, corresponding assembly, NC IDs, strains names. Write a csv table with all these as final data tablee,
-#+ a table with WPs and Assembly IDs for inputting in FLAG
-
 list_of_accession = []
 with open (sys.argv[2], 'r', encoding='utf-8-sig') as csvfile:
     efetchin=csv.reader(csvfile, delimiter = ',')
