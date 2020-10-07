@@ -114,7 +114,7 @@ df5 = df4.sort_values(by = ["Organism", " Strain"], axis=0, ascending=True, inpl
 #get WP_X and GFC_X IDs in a tsv to input in FLAGs
 new_dataframe1 = df3[['Assembly', 'Protein']]
 new_dataframe2 = df3[['Organism',' Strain', 'Assembly', 'Protein']]
-new_dataframe1.sort_values(by = "Protein", axis=0, ascending=True, inplace=False).to_csv('flags_input.tsv', '\t', header=False, columns = ['Assembly', 'Protein'])
-new_dataframe2.sort_values(by = "Organism", axis=0, ascending=True, inplace=False).to_csv('flags_input_wstrains.tsv', '\t', header=False, columns = ['Organism',' Strain', 'Assembly', 'Protein'])
+new_dataframe1.sort_values(by = "Protein", axis=0, ascending=True, inplace=False).to_csv('neigh_analysis_input.tsv', '\t', header=False, columns = ['Assembly', 'Protein'])
+new_dataframe2.sort_values(by = "Organism", axis=0, ascending=True, inplace=False).to_csv('neigh_analysis_input_wstrains.tsv', '\t', header=False, columns = ['Organism',' Strain', 'Assembly', 'Protein'])
 
 print ('program finished')
