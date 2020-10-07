@@ -16,7 +16,7 @@ Please remember that these scripts were written by a self-taught beginner,you're
 4) **get_fasta_DNA.py**:  Python based script that uses the Entrez util Efetch to download the DNA Fasta sequence for a list of nuccore IDs. Run as follows:
 `python get_fasta_dna.py <example@email.com> <file_with_protein_IDs.csv>`
 
-
+5) **reptile.py**:  Python based  helper script. It is meant to be used after arcane.py or etna.py. From the output table of arcane.py or etna.py, it drops all the lines where proteins are annotated as 'hypothetical proteins'. Run as follows: `python reptile.py <file_with_IPG_report.csv>`
 
 
 ***Dependencies: For Scripts from 2-x, Biopython is needed. Additionally, arcane.py require a local installation of HMMER***
