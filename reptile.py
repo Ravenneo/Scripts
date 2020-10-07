@@ -1,3 +1,6 @@
+__author__ = 'Dr Giusy Mariano'
+__email__ = 'giusy.mariano@ncl.ac.uk'
+__license__ = "GPL"
 #!/usr/bin/env python
 # coding: utf-8
 
