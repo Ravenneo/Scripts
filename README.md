@@ -18,10 +18,17 @@ Please remember that these scripts were written by a self-taught beginner,you're
 
 5) **reptile.py**:  Python based  helper script. It is meant to be used after arcane.py or etna.py. From the output table of arcane.py or etna.py, it drops all the lines where proteins are annotated as 'hypothetical proteins'. Run as follows: `python reptile.py <file_with_IPG_report.csv>`
 
+6) **get_taxonomy_data.py**: Python based script that uses Ete3 NCBI TAXA (2,3) to derive full descendand list starting from the TaxID of the Superkingdom rank. Pandas is then used to parse the output and eliminate unclassified organisms. The output of this is a file that can be uploaded in NCBI Common Tree (3) to obtain a tree of life with desidered organisms. The input file for the first script argument will be a list of Superkingdom rank TaxIDs. The second script argument is a the level of resolution desired for the tree (i.e. inpyt 'order' if the desired resolution level is order. Input 'species' if the desired level of resolution are species)
+Run as : `python get_taxonomy_data.py <input_file.csv> <desired level of Tree resolution>`
 
-***Dependencies: For Scripts from 2-x, Biopython is needed. Additionally, arcane.py require a local installation of HMMER***
+7) **mario.py (hMmseARch hIts taxOnomy)**: Python based script that uses Ete3 NCBI TAXA (2,3) to derive full taxonomy of hits derived from arcane.py. Run as : `python mario.py <input_file_from_arcane.csv> <name_of_ouput_file.csv>`
+
+
+***Dependencies: For Scripts from 1-7, Biopython is needed. Additionally, arcane.py require a local installation of HMMER***
 
 
 
 ## Reference
 1)HMMER: Eddy SR. Accelerated Profile HMM Searches. Pearson WR, editor. PLoS Comput Biol. 2011;7: e1002195.
+2)ETE 3: Reconstruction, analysis and visualization of phylogenomic data. Jaime Huerta-Cepas, Francois Serra and Peer Bork. Mol Biol Evol 2016; doi: 10.1093/molbev/msw046
+3)Schoch CL, et al. NCBI Taxonomy: a comprehensive update on curation, resources and tools. Database (Oxford). 2020: baaa062
