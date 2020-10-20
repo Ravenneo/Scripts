@@ -6,6 +6,7 @@ __license__ = "GPL"
 import sys
 import subprocess as sp
 import csv
+from Bio import SearchIO
 import pandas as pd
 from Bio import Entrez
 
@@ -28,11 +29,12 @@ if __name__ == '__main__':
     
     
     
-x = input('min lenght')
-y = input('max lenght')
-min_len = int(x)
-max_len = int(y)
-from Bio import SearchIO
+    
+x = int(input('min lenght'))
+y = int(input('max lenght'))
+
+
+
     
 with open('HMM_output.txt', newline ='') as input:
     for qresult in SearchIO.parse(input, 'hmmscan3-domtab'):
@@ -65,7 +67,7 @@ print ('efetch_start')
 # Write a csv table with all these as final data tablee,
 #+ a table with WPs and Assembly IDs for inputting in FLAG
 
-Entrez.email = sys.argv[3]
+Entrez.email = 'giusy.mariano@ncl.ac.uk'
 
 list_of_accession = []
 with open ('efetch_input.csv', 'r') as csvfile:
@@ -111,7 +113,7 @@ df4 = dff4.sort_values(by = [" Strain",'Start'], axis=0, ascending=True, inplace
 #Write in a csv file
 df5 = df4.sort_values(by = ["Organism", " Strain"], axis=0, ascending=True, inplace=False).to_csv("final_parsed_output.tsv", "\t", index=False)
 
-#get WP_X and GFC_X IDs in a tsv to input in FLAGs
+#get WP_X and GFC_X IDs in a tsv to input
 new_dataframe1 = df3[['Assembly', 'Protein']]
 new_dataframe2 = df3[['Organism',' Strain', 'Assembly', 'Protein']]
 new_dataframe1.sort_values(by = "Protein", axis=0, ascending=True, inplace=False).to_csv('neigh_analysis_input.tsv', '\t', header=False, columns = ['Assembly', 'Protein'])
