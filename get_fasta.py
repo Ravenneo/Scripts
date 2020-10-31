@@ -18,7 +18,7 @@ with open (sys.argv[2], 'r', encoding='utf-8-sig') as csvfile:
         
 with open('efetch_output.txt', mode = 'w') as efetch_output:
     efetch_output = csv.writer(efetch_output, quotechar='"', quoting=csv.QUOTE_MINIMAL)
-    input_handle = Entrez.efetch(db="nuccore", id= list_of_accession, rettype="fasta")
+    input_handle = Entrez.efetch(db="protein", id= list_of_accession, rettype="fasta")
     output_handle = open("efetch_output.txt", "a")
     for line in input_handle:
         output_handle.write(line)
